@@ -1,4 +1,6 @@
-import 'package:ffuf_bootcamp_exam/screens/auth/auth_screen.dart';
+import 'package:async_redux/async_redux.dart';
+import 'package:ffuf_bootcamp_exam/screens/projects/project_assignment/project_assignment_screen.dart';
+import 'package:ffuf_bootcamp_exam/states/app_state.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 
@@ -14,10 +16,15 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(fontFamily: 'Roboto'),
-      debugShowCheckedModeBanner: false,
-      home: AuthScreen(),
+    final store = Store<AppState>(initialState: AppState.initialState());
+
+    return StoreProvider<AppState>(
+      store: store,
+      child: MaterialApp(
+        theme: ThemeData(fontFamily: 'Roboto'),
+        debugShowCheckedModeBanner: false,
+        home: ProjectAssignmentScreen(),
+      ),
     );
   }
 }
