@@ -20,7 +20,7 @@ AppState _$AppStateFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$AppState {
-  List<Employee> get employees => throw _privateConstructorUsedError;
+  List<User> get users => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -32,7 +32,7 @@ mixin _$AppState {
 abstract class $AppStateCopyWith<$Res> {
   factory $AppStateCopyWith(AppState value, $Res Function(AppState) then) =
       _$AppStateCopyWithImpl<$Res>;
-  $Res call({List<Employee> employees});
+  $Res call({List<User> users});
 }
 
 /// @nodoc
@@ -45,13 +45,13 @@ class _$AppStateCopyWithImpl<$Res> implements $AppStateCopyWith<$Res> {
 
   @override
   $Res call({
-    Object? employees = freezed,
+    Object? users = freezed,
   }) {
     return _then(_value.copyWith(
-      employees: employees == freezed
-          ? _value.employees
-          : employees // ignore: cast_nullable_to_non_nullable
-              as List<Employee>,
+      users: users == freezed
+          ? _value.users
+          : users // ignore: cast_nullable_to_non_nullable
+              as List<User>,
     ));
   }
 }
@@ -62,7 +62,7 @@ abstract class _$$_AppStateCopyWith<$Res> implements $AppStateCopyWith<$Res> {
           _$_AppState value, $Res Function(_$_AppState) then) =
       __$$_AppStateCopyWithImpl<$Res>;
   @override
-  $Res call({List<Employee> employees});
+  $Res call({List<User> users});
 }
 
 /// @nodoc
@@ -77,13 +77,13 @@ class __$$_AppStateCopyWithImpl<$Res> extends _$AppStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? employees = freezed,
+    Object? users = freezed,
   }) {
     return _then(_$_AppState(
-      employees: employees == freezed
-          ? _value._employees
-          : employees // ignore: cast_nullable_to_non_nullable
-              as List<Employee>,
+      users: users == freezed
+          ? _value._users
+          : users // ignore: cast_nullable_to_non_nullable
+              as List<User>,
     ));
   }
 }
@@ -91,22 +91,21 @@ class __$$_AppStateCopyWithImpl<$Res> extends _$AppStateCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_AppState implements _AppState {
-  _$_AppState({required final List<Employee> employees})
-      : _employees = employees;
+  _$_AppState({required final List<User> users}) : _users = users;
 
   factory _$_AppState.fromJson(Map<String, dynamic> json) =>
       _$$_AppStateFromJson(json);
 
-  final List<Employee> _employees;
+  final List<User> _users;
   @override
-  List<Employee> get employees {
+  List<User> get users {
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_employees);
+    return EqualUnmodifiableListView(_users);
   }
 
   @override
   String toString() {
-    return 'AppState(employees: $employees)';
+    return 'AppState(users: $users)';
   }
 
   @override
@@ -114,14 +113,13 @@ class _$_AppState implements _AppState {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_AppState &&
-            const DeepCollectionEquality()
-                .equals(other._employees, _employees));
+            const DeepCollectionEquality().equals(other._users, _users));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(_employees));
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_users));
 
   @JsonKey(ignore: true)
   @override
@@ -135,12 +133,12 @@ class _$_AppState implements _AppState {
 }
 
 abstract class _AppState implements AppState {
-  factory _AppState({required final List<Employee> employees}) = _$_AppState;
+  factory _AppState({required final List<User> users}) = _$_AppState;
 
   factory _AppState.fromJson(Map<String, dynamic> json) = _$_AppState.fromJson;
 
   @override
-  List<Employee> get employees => throw _privateConstructorUsedError;
+  List<User> get users => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$$_AppStateCopyWith<_$_AppState> get copyWith =>

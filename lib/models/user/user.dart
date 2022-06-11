@@ -1,11 +1,11 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'employee.freezed.dart';
-part 'employee.g.dart';
+part 'user.freezed.dart';
+part 'user.g.dart';
 
 @freezed
-class Employee with _$Employee {
-  factory Employee({
+class User with _$User {
+  factory User({
     required String id,
     required String firstName,
     required String lastName,
@@ -16,7 +16,7 @@ class Employee with _$Employee {
     required String telephone,
     required String fax,
     required String mobile,
-  }) = _Employee;
+  }) = _User;
 
-  factory Employee.fromJson(Map<String, dynamic> json) => _$EmployeeFromJson(json);
+  factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);
 }
