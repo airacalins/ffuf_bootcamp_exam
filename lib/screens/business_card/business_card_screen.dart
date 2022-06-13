@@ -1,5 +1,6 @@
-import 'package:ffuf_bootcamp_exam/widgets/export_widgets.dart';
 import 'package:flutter/material.dart';
+
+import 'package:ffuf_bootcamp_exam/exports/export_widgets.dart';
 
 class BusinessCardScreen extends StatelessWidget {
   const BusinessCardScreen({Key? key}) : super(key: key);

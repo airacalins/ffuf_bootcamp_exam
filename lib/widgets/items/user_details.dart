@@ -1,10 +1,6 @@
-// ignore_for_file: unnecessary_const
-
-import 'package:ffuf_bootcamp_exam/constants/export_constants.dart';
-import 'package:ffuf_bootcamp_exam/models/export_models.dart';
-import 'package:ffuf_bootcamp_exam/widgets/custom_clipper/rectangular_slanting_end.dart';
-import 'package:ffuf_bootcamp_exam/widgets/export_widgets.dart';
 import 'package:flutter/material.dart';
+
+import 'package:ffuf_bootcamp_exam/exports/export_widgets.dart';
 
 class UserDetails extends StatelessWidget {
   final String title;
@@ -32,7 +28,7 @@ class UserDetails extends StatelessWidget {
         Headline2(title),
         Row(
           children: [
-            Container(
+            SizedBox(
               width: 70,
               child: CircleAvatar(
                 backgroundImage: NetworkImage(imageUrl),
@@ -47,7 +43,7 @@ class UserDetails extends StatelessWidget {
                 Headline4(fullName),
                 Label1(email),
                 const SizedBox(height: 10.0),
-                position != null ? Label1(position!) : RectangularSlantingEndClipper(title: 'jfkajfka;l'),
+                position != null ? Label1(position!) : RectangularSlantingEndClipper(title: mobile!),
               ],
             )
           ],

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import 'package:ffuf_bootcamp_exam/constants/export_constants.dart';
-import 'package:ffuf_bootcamp_exam/widgets/export_widgets.dart';
+import 'package:ffuf_bootcamp_exam/exports/export_constants.dart';
+import 'package:ffuf_bootcamp_exam/exports/export_widgets.dart';
 
 class SideDrawerItem extends StatelessWidget {
   final String activeIcon;
@@ -45,7 +45,7 @@ class SideDrawerItem extends StatelessWidget {
               color: isActive ? null : textColor,
             ),
           ),
-          SizedBox(height: 25.0)
+          const SizedBox(height: 25.0)
         ],
       ),
     );

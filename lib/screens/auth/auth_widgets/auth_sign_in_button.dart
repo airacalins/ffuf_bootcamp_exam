@@ -2,7 +2,7 @@ import 'package:ffuf_bootcamp_exam/routes/route_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import 'package:ffuf_bootcamp_exam/constants/export_constants.dart';
+import 'package:ffuf_bootcamp_exam/exports/export_constants.dart';
 
 class AuthSignInButton extends StatelessWidget {
   final Function onLogin;

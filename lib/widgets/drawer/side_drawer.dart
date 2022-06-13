@@ -1,8 +1,9 @@
-import 'package:ffuf_bootcamp_exam/constants/export_constants.dart';
-import 'package:ffuf_bootcamp_exam/routes/route_manager.dart';
-import 'package:ffuf_bootcamp_exam/widgets/drawer/side_drawer_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+
+import 'package:ffuf_bootcamp_exam/exports/export_constants.dart';
+import 'package:ffuf_bootcamp_exam/routes/route_manager.dart';
+import 'package:ffuf_bootcamp_exam/widgets/drawer/side_drawer_item.dart';
 
 class SideDrawer extends StatelessWidget {
   const SideDrawer({Key? key}) : super(key: key);
@@ -25,7 +26,7 @@ class SideDrawer extends StatelessWidget {
                 Container(
                   height: 20.0,
                   width: 20.0,
-                  margin: EdgeInsets.only(right: 30.0),
+                  margin: const EdgeInsets.only(right: 30.0),
                   child: SvgPicture.asset(logo),
                 )
               ],
@@ -49,7 +50,7 @@ class SideDrawer extends StatelessWidget {
                     inActiveIcon: businessCardInactiveIcon,
                     title: vielenDank,
                     isActive: false,
-                    navigateTo: RouteManager.authPage,
+                    navigateTo: RouteManager.businessCardPage,
                   )
                 ],
               ),

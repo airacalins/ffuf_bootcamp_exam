@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import 'package:ffuf_bootcamp_exam/constants/export_constants.dart';
-import 'package:ffuf_bootcamp_exam/widgets/export_widgets.dart';
+import 'package:ffuf_bootcamp_exam/exports/export_constants.dart';
+import 'package:ffuf_bootcamp_exam/exports/export_widgets.dart';
 
 class ReportSummary extends StatelessWidget {
   final String title;
@@ -22,12 +22,12 @@ class ReportSummary extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Headline2(title),
-        SizedBox(height: 20.0),
+        const SizedBox(height: 20.0),
         Row(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Container(
+            SizedBox(
               width: 80,
               child: SvgPicture.asset(calendarIcon),
             ),
@@ -35,7 +35,7 @@ class ReportSummary extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Headline5(subtitle),
-                SizedBox(height: 5.0),
+                const SizedBox(height: 5.0),
                 ElevatedButton.icon(
                   onPressed: () {},
                   icon: Text(buttonTitle),

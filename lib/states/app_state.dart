@@ -1,4 +1,4 @@
-import 'package:ffuf_bootcamp_exam/models/export_models.dart';
+import 'package:ffuf_bootcamp_exam/exports/export_models.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'app_state.freezed.dart';
