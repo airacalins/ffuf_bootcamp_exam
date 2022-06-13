@@ -5,8 +5,12 @@ class Headline5 extends StatelessWidget {
   final FontWeight? fontWeight;
   final Color? color;
 
-  const Headline5(this.text, {Key? key, this.fontWeight, this.color})
-      : super(key: key);
+  const Headline5(
+    this.text, {
+    Key? key,
+    this.fontWeight,
+    this.color,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

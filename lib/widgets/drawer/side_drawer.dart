@@ -17,7 +17,7 @@ class SideDrawer extends StatelessWidget {
           children: [
             AppBar(
               leading: IconButton(
-                onPressed: () {},
+                onPressed: () => Navigator.pop(context),
                 icon: SvgPicture.asset(closeIcon),
                 iconSize: 15.0,
               ),
@@ -42,7 +42,7 @@ class SideDrawer extends StatelessWidget {
                     inActiveIcon: userInactiveIcon,
                     title: meinKonto,
                     isActive: true,
-                    navigateTo: RouteManager.authPage,
+                    navigateTo: RouteManager.accountPage,
                   ),
                   SideDrawerItem(
                     activeIcon: businessCardActiveIcon,

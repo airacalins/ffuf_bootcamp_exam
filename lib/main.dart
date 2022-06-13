@@ -1,4 +1,6 @@
 import 'package:async_redux/async_redux.dart';
+import 'package:ffuf_bootcamp_exam/features/auth/auth_page.dart';
+import 'package:ffuf_bootcamp_exam/features/projects/project_assignment/project_assignment_screen.dart';
 import 'package:ffuf_bootcamp_exam/screens/export_screens.dart';
 import 'package:ffuf_bootcamp_exam/widgets/export_widgets.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -36,9 +38,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
         debugShowCheckedModeBanner: false,
-        // home: ProjectAssignmentScreen(),
-        home: const UserScreen(),
-        // home: const UserPage(),
+        home: const AuthPage(),
         onGenerateRoute: RouteManager.generateRoute,
       ),
     );

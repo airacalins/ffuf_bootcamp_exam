@@ -9,6 +9,7 @@ import 'package:flutter/material.dart';
 class UserDetails extends StatelessWidget {
   final String title;
   final String fullName;
+  final String imageUrl;
   final String email;
   final String? position;
   final String? mobile;
@@ -17,6 +18,7 @@ class UserDetails extends StatelessWidget {
     Key? key,
     required this.title,
     required this.fullName,
+    required this.imageUrl,
     required this.email,
     this.position,
     this.mobile,
@@ -32,8 +34,8 @@ class UserDetails extends StatelessWidget {
           children: [
             Container(
               width: 70,
-              child: const CircleAvatar(
-                backgroundColor: Colors.grey,
+              child: CircleAvatar(
+                backgroundImage: NetworkImage(imageUrl),
                 radius: 30,
               ),
             ),
@@ -45,9 +47,7 @@ class UserDetails extends StatelessWidget {
                 Headline4(fullName),
                 Label1(email),
                 const SizedBox(height: 10.0),
-                position != null
-                    ? Label1(position!)
-                    : RectangularSlantingEndClipper(title: 'jfkajfka;l'),
+                position != null ? Label1(position!) : RectangularSlantingEndClipper(title: 'jfkajfka;l'),
               ],
             )
           ],

@@ -16,6 +16,5 @@ class AppState with _$AppState {
         loginUser: null,
       );
 
-  factory AppState.fromJson(Map<String, dynamic> json) =>
-      _$AppStateFromJson(json);
+  factory AppState.fromJson(Map<String, dynamic> json) => _$AppStateFromJson(json);
 }

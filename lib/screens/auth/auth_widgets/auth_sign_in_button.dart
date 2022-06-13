@@ -1,17 +1,24 @@
+import 'package:ffuf_bootcamp_exam/routes/route_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import 'package:ffuf_bootcamp_exam/constants/export_constants.dart';
 
 class AuthSignInButton extends StatelessWidget {
-  const AuthSignInButton({
+  final Function onLogin;
+
+  const AuthSignInButton(
+    this.onLogin, {
     Key? key,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return MaterialButton(
-      onPressed: () {},
+      onPressed: () {
+        onLogin();
+        Navigator.of(context).pushNamed(RouteManager.accountPage);
+      },
       child: Container(
         padding: const EdgeInsets.all(10.0),
         decoration: BoxDecoration(

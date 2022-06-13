@@ -11,7 +11,8 @@ class AccountContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.all(15.0),
+      width: MediaQuery.of(context).size.width,
+      margin: const EdgeInsets.only(top: 15.0, right: 15.0, left: 15.0),
       padding: const EdgeInsets.symmetric(
         vertical: 20.0,
         horizontal: 15.0,

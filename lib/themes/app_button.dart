@@ -11,8 +11,8 @@ class AppButton {
     primary: Colors.white,
     padding: const EdgeInsets.all(10.0),
     textStyle: const TextStyle(
-      fontWeight: FontWeight.w500,
-      fontSize: 15,
+      fontWeight: FontWeight.w400,
+      fontSize: 13,
       fontFamily: 'Poppins',
     ),
   ));
