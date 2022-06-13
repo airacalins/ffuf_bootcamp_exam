@@ -21,6 +21,7 @@ AppState _$AppStateFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$AppState {
   List<User> get users => throw _privateConstructorUsedError;
+  User? get loginUser => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -32,7 +33,9 @@ mixin _$AppState {
 abstract class $AppStateCopyWith<$Res> {
   factory $AppStateCopyWith(AppState value, $Res Function(AppState) then) =
       _$AppStateCopyWithImpl<$Res>;
-  $Res call({List<User> users});
+  $Res call({List<User> users, User? loginUser});
+
+  $UserCopyWith<$Res>? get loginUser;
 }
 
 /// @nodoc
@@ -46,13 +49,29 @@ class _$AppStateCopyWithImpl<$Res> implements $AppStateCopyWith<$Res> {
   @override
   $Res call({
     Object? users = freezed,
+    Object? loginUser = freezed,
   }) {
     return _then(_value.copyWith(
       users: users == freezed
           ? _value.users
           : users // ignore: cast_nullable_to_non_nullable
               as List<User>,
+      loginUser: loginUser == freezed
+          ? _value.loginUser
+          : loginUser // ignore: cast_nullable_to_non_nullable
+              as User?,
     ));
+  }
+
+  @override
+  $UserCopyWith<$Res>? get loginUser {
+    if (_value.loginUser == null) {
+      return null;
+    }
+
+    return $UserCopyWith<$Res>(_value.loginUser!, (value) {
+      return _then(_value.copyWith(loginUser: value));
+    });
   }
 }
 
@@ -62,7 +81,10 @@ abstract class _$$_AppStateCopyWith<$Res> implements $AppStateCopyWith<$Res> {
           _$_AppState value, $Res Function(_$_AppState) then) =
       __$$_AppStateCopyWithImpl<$Res>;
   @override
-  $Res call({List<User> users});
+  $Res call({List<User> users, User? loginUser});
+
+  @override
+  $UserCopyWith<$Res>? get loginUser;
 }
 
 /// @nodoc
@@ -78,12 +100,17 @@ class __$$_AppStateCopyWithImpl<$Res> extends _$AppStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object? users = freezed,
+    Object? loginUser = freezed,
   }) {
     return _then(_$_AppState(
       users: users == freezed
           ? _value._users
           : users // ignore: cast_nullable_to_non_nullable
               as List<User>,
+      loginUser: loginUser == freezed
+          ? _value.loginUser
+          : loginUser // ignore: cast_nullable_to_non_nullable
+              as User?,
     ));
   }
 }
@@ -91,7 +118,8 @@ class __$$_AppStateCopyWithImpl<$Res> extends _$AppStateCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_AppState implements _AppState {
-  _$_AppState({required final List<User> users}) : _users = users;
+  _$_AppState({required final List<User> users, this.loginUser})
+      : _users = users;
 
   factory _$_AppState.fromJson(Map<String, dynamic> json) =>
       _$$_AppStateFromJson(json);
@@ -104,8 +132,11 @@ class _$_AppState implements _AppState {
   }
 
   @override
+  final User? loginUser;
+
+  @override
   String toString() {
-    return 'AppState(users: $users)';
+    return 'AppState(users: $users, loginUser: $loginUser)';
   }
 
   @override
@@ -113,13 +144,16 @@ class _$_AppState implements _AppState {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_AppState &&
-            const DeepCollectionEquality().equals(other._users, _users));
+            const DeepCollectionEquality().equals(other._users, _users) &&
+            const DeepCollectionEquality().equals(other.loginUser, loginUser));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(_users));
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(_users),
+      const DeepCollectionEquality().hash(loginUser));
 
   @JsonKey(ignore: true)
   @override
@@ -133,12 +167,15 @@ class _$_AppState implements _AppState {
 }
 
 abstract class _AppState implements AppState {
-  factory _AppState({required final List<User> users}) = _$_AppState;
+  factory _AppState({required final List<User> users, final User? loginUser}) =
+      _$_AppState;
 
   factory _AppState.fromJson(Map<String, dynamic> json) = _$_AppState.fromJson;
 
   @override
   List<User> get users => throw _privateConstructorUsedError;
+  @override
+  User? get loginUser => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$$_AppStateCopyWith<_$_AppState> get copyWith =>

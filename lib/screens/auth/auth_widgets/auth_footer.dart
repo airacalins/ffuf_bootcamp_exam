@@ -9,7 +9,7 @@ class AuthFooter extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(bottom: 30.0),
+      padding: const EdgeInsets.only(bottom: 30.0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: const [
