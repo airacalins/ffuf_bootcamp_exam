@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-import 'package:ffuf_bootcamp_exam/constants/export_constants.dart';
-import 'package:ffuf_bootcamp_exam/features/auth/auth_view_model.dart';
-import 'package:ffuf_bootcamp_exam/screens/export_screens_widgets.dart';
+import 'package:ffuf_bootcamp_exam/exports/export_constants.dart';
+import 'package:ffuf_bootcamp_exam/exports/export_screens_widgets.dart';
 
 class AuthScreen extends StatelessWidget {
   final Function onLogin;
@@ -34,7 +33,7 @@ class AuthScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 75.0),
                 Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 15.0),
+                  padding: const EdgeInsets.symmetric(horizontal: 15.0),
                   child: AuthSignInButton(onLogin),
                 ),
               ],

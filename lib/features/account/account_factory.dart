@@ -2,8 +2,6 @@ import 'package:async_redux/async_redux.dart';
 
 import 'package:ffuf_bootcamp_exam/features/account/account_page.dart';
 import 'package:ffuf_bootcamp_exam/features/account/account_view_model.dart';
-import 'package:ffuf_bootcamp_exam/models/export_models.dart';
-import 'package:ffuf_bootcamp_exam/models/union_page_state.dart';
 import 'package:ffuf_bootcamp_exam/states/app_state.dart';
 
 class AccountFactory extends VmFactory<AppState, AccountPage> {
@@ -11,14 +9,12 @@ class AccountFactory extends VmFactory<AppState, AccountPage> {
 
   @override
   Vm? fromStore() => AccountViewModel(
-        unionPageState: _getLoadingState(),
+        users: state.users,
+        loggedInUser: state.loggedInUser!,
+        superior: state.users
+            .where(
+              (user) => user.id == state.loggedInUser!.superiorId,
+            )
+            .first,
       );
-
-  UnionPageState<User?> _getLoadingState() {
-    if (state.loginUser == null) {
-      return const UnionPageState.loading();
-    } else {
-      return UnionPageState(state.loginUser);
-    }
-  }
 }

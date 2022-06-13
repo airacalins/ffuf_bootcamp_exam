@@ -1,15 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
-import 'package:ffuf_bootcamp_exam/constants/export_constants.dart';
-import 'package:ffuf_bootcamp_exam/models/export_models.dart';
-import 'package:ffuf_bootcamp_exam/screens/export_screens_widgets.dart';
-import 'package:ffuf_bootcamp_exam/widgets/export_widgets.dart';
+import 'package:ffuf_bootcamp_exam/exports/export_constants.dart';
+import 'package:ffuf_bootcamp_exam/exports/export_models.dart';
+import 'package:ffuf_bootcamp_exam/exports/export_screens_widgets.dart';
+import 'package:ffuf_bootcamp_exam/exports/export_widgets.dart';
 
 class AccountScreen extends StatelessWidget {
   final User user;
+  final User superior;
 
-  const AccountScreen({Key? key, required this.user}) : super(key: key);
+  const AccountScreen({
+    Key? key,
+    required this.user,
+    required this.superior,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -28,15 +32,15 @@ class AccountScreen extends StatelessWidget {
                     fullName: '${user.firstName} ${user.lastName}',
                     email: user.email,
                     position: user.position,
-                    imageUrl: '',
+                    imageUrl: user.imageUrl,
                   ),
                   const SizedBox(height: 30.0),
-                  const UserDetails(
+                  UserDetails(
                     title: vorgesetzter,
-                    fullName: 'Greg Neu',
-                    imageUrl: '',
-                    email: 'max.mustermann@bkl.de',
-                    mobile: '11--22--222',
+                    fullName: '${superior.firstName} ${superior.lastName}',
+                    imageUrl: superior.imageUrl,
+                    email: superior.email,
+                    mobile: superior.mobile,
                   ),
                   const SizedBox(height: 30.0),
                   const ReportSummary(
@@ -54,17 +58,17 @@ class AccountScreen extends StatelessWidget {
                 ],
               ),
             ),
-            const AccountOverview(
-              annualLeave: 25,
-              remainingVacationEpos: 10,
-              requested: 08,
-              carryoverFromPreviousYear: 01,
+            AccountOverview(
+              annualLeave: user.annualLeave,
+              remainingVacationEpos: user.remainingVacationEpos,
+              requested: user.requested,
+              carryoverFromPreviousYear: user.carryoverFromPreviousYear,
             ),
-            const AccountCurrentBudget(currentBudget: 7),
-            const AccountSickDays(sickDays: 05),
-            const AzAccount(
-              accumulatedHours: 100,
-              totalHours: 250,
+            AccountCurrentBudget(currentBudget: user.currentBudget),
+            AccountSickDays(sickDays: user.sickDays),
+            AzAccount(
+              accumulatedHours: user.totalHours - user.accumulatedHours,
+              totalHours: user.totalHours,
             ),
             const SizedBox(height: 15.0),
           ],

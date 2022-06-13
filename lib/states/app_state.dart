@@ -1,4 +1,4 @@
-import 'package:ffuf_bootcamp_exam/models/export_models.dart';
+import 'package:ffuf_bootcamp_exam/exports/export_models.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'app_state.freezed.dart';
@@ -8,12 +8,12 @@ part 'app_state.g.dart';
 class AppState with _$AppState {
   factory AppState({
     required List<User> users,
-    User? loginUser,
+    User? loggedInUser,
   }) = _AppState;
 
   factory AppState.initialState({required}) => AppState(
         users: [],
-        loginUser: null,
+        loggedInUser: null,
       );
 
   factory AppState.fromJson(Map<String, dynamic> json) => _$AppStateFromJson(json);

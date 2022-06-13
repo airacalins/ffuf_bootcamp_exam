@@ -17,6 +17,15 @@ _$_User _$$_UserFromJson(Map<String, dynamic> json) => _$_User(
       telephone: json['telephone'] as String,
       fax: json['fax'] as String,
       mobile: json['mobile'] as String,
+      superiorId: json['superiorId'] as String,
+      annualLeave: json['annualLeave'] as int,
+      remainingVacationEpos: json['remainingVacationEpos'] as int,
+      requested: json['requested'] as int,
+      carryoverFromPreviousYear: json['carryoverFromPreviousYear'] as int,
+      currentBudget: json['currentBudget'] as int,
+      sickDays: json['sickDays'] as int,
+      accumulatedHours: json['accumulatedHours'] as int,
+      totalHours: json['totalHours'] as int,
     );
 
 Map<String, dynamic> _$$_UserToJson(_$_User instance) => <String, dynamic>{
@@ -30,4 +39,13 @@ Map<String, dynamic> _$$_UserToJson(_$_User instance) => <String, dynamic>{
       'telephone': instance.telephone,
       'fax': instance.fax,
       'mobile': instance.mobile,
+      'superiorId': instance.superiorId,
+      'annualLeave': instance.annualLeave,
+      'remainingVacationEpos': instance.remainingVacationEpos,
+      'requested': instance.requested,
+      'carryoverFromPreviousYear': instance.carryoverFromPreviousYear,
+      'currentBudget': instance.currentBudget,
+      'sickDays': instance.sickDays,
+      'accumulatedHours': instance.accumulatedHours,
+      'totalHours': instance.totalHours,
     };

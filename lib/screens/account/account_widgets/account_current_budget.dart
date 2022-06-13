@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:ffuf_bootcamp_exam/constants/export_constants.dart';
+import 'package:ffuf_bootcamp_exam/exports/export_constants.dart';
 
 class AccountCurrentBudget extends StatelessWidget {
   final int currentBudget;
@@ -13,8 +13,8 @@ class AccountCurrentBudget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 15.0),
-      padding: EdgeInsets.symmetric(
+      margin: const EdgeInsets.symmetric(horizontal: 15.0),
+      padding: const EdgeInsets.symmetric(
         vertical: 20.0,
         horizontal: 10.0,
       ),
@@ -22,12 +22,12 @@ class AccountCurrentBudget extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Text(aktuellesBudget),
+          const Text(aktuellesBudget),
           CircleAvatar(
             backgroundColor: yellow,
             child: Text(
               currentBudget.toString(),
-              style: TextStyle(color: Colors.white),
+              style: const TextStyle(color: Colors.white),
             ),
           )
         ],

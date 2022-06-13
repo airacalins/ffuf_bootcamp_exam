@@ -39,7 +39,7 @@ class RectangularSlantingEndClipper extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.only(
             left: 5.0,
-            right: 25.0,
+            right: 20.0,
             top: 5.0,
             bottom: 5.0,
           ),

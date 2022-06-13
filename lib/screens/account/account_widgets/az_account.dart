@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:ffuf_bootcamp_exam/constants/export_constants.dart';
-import 'package:ffuf_bootcamp_exam/widgets/export_widgets.dart';
+import 'package:ffuf_bootcamp_exam/exports/export_constants.dart';
+import 'package:ffuf_bootcamp_exam/exports/export_widgets.dart';
 
 class AzAccount extends StatelessWidget {
   final int accumulatedHours;

@@ -7,7 +7,7 @@ class SetLoginUser extends ReduxAction<AppState> {
   @override
   Future<AppState?> reduce() async {
     try {
-      return state.copyWith(loginUser: state.users.first);
+      return state.copyWith(loggedInUser: state.users.first);
     } on Exception catch (e) {
       print(e);
     }

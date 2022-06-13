@@ -10,13 +10,13 @@ _$_AppState _$$_AppStateFromJson(Map<String, dynamic> json) => _$_AppState(
       users: (json['users'] as List<dynamic>)
           .map((e) => User.fromJson(e as Map<String, dynamic>))
           .toList(),
-      loginUser: json['loginUser'] == null
+      loggedInUser: json['loggedInUser'] == null
           ? null
-          : User.fromJson(json['loginUser'] as Map<String, dynamic>),
+          : User.fromJson(json['loggedInUser'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$_AppStateToJson(_$_AppState instance) =>
     <String, dynamic>{
       'users': instance.users,
-      'loginUser': instance.loginUser,
+      'loggedInUser': instance.loggedInUser,
     };
