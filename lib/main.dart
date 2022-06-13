@@ -1,6 +1,6 @@
 import 'package:async_redux/async_redux.dart';
-import 'package:ffuf_bootcamp_exam/features/auth/auth_page.dart';
 import 'package:ffuf_bootcamp_exam/screens/export_screens.dart';
+import 'package:ffuf_bootcamp_exam/widgets/export_widgets.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
@@ -31,6 +31,7 @@ class MyApp extends StatelessWidget {
           elevatedButtonTheme: AppButton.elevated,
           appBarTheme: const AppBarTheme(
             backgroundColor: Colors.white,
+            foregroundColor: Colors.black,
             elevation: 0,
           ),
         ),

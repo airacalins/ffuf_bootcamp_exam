@@ -8,8 +8,7 @@ const String backArrowIconBlackColor = '$iconPath/back_arrow_black.svg';
 const String backArrowIconWhiteColor = '$iconPath/back_arrow_white.svg';
 const String betIconGreyColor = '$iconPath/bet_grey.svg';
 const String betIconBlackColor = '$iconPath/bet_black.svg';
-const String businessCardIconGreyColor = '$iconPath/business_card_grey.svg';
-const String businessCardIconBlackColor = '$iconPath/business_card_black.svg';
+
 const String calendarIcon = '$iconPath/calendar.svg';
 const String calendarIconDotted = '$iconPath/calendar_dotted.svg';
 const String checkIconWhiteColor = '$iconPath/check_white.svg';
@@ -34,5 +33,8 @@ const String timeIconGreyColor = '$iconPath/time_grey.svg';
 const String timeIconBlackColor = '$iconPath/time_black.svg';
 const String timeIconRedColor = '$iconPath/time_red.svg';
 const String treeIcon = '$iconPath/tree.svg';
-const String userIconGreyColor = '$iconPath/user_grey.svg';
-const String userIconBlackColor = '$iconPath/user_black.svg';
+
+const String businessCardActiveIcon = '$iconPath/business_card_active.svg';
+const String businessCardInactiveIcon = '$iconPath/business_card_inactive.svg';
+const String userActiveIcon = '$iconPath/user_active.svg';
+const String userInactiveIcon = '$iconPath/user_inactive.svg';

@@ -19,6 +19,7 @@ class UserScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text('hi'),
       ),
+      drawer: SideDrawer(),
       body: AccountContainer(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,

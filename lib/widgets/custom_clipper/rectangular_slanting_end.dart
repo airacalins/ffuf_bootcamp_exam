@@ -44,7 +44,7 @@ class RectangularSlantingEndClipper extends StatelessWidget {
             bottom: 5.0,
           ),
           child: Text(
-            title!,
+            title,
             style: const TextStyle(color: Colors.white),
           ),
         ),
