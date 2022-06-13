@@ -16,6 +16,7 @@ class User with _$User {
     required String telephone,
     required String fax,
     required String mobile,
+    required String superiorId,
   }) = _User;
 
   factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);

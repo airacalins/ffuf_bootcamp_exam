@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 import 'package:ffuf_bootcamp_exam/constants/export_constants.dart';
 import 'package:ffuf_bootcamp_exam/models/export_models.dart';
@@ -8,8 +7,13 @@ import 'package:ffuf_bootcamp_exam/widgets/export_widgets.dart';
 
 class AccountScreen extends StatelessWidget {
   final User user;
+  final User superior;
 
-  const AccountScreen({Key? key, required this.user}) : super(key: key);
+  const AccountScreen({
+    Key? key,
+    required this.user,
+    required this.superior,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -28,12 +32,12 @@ class AccountScreen extends StatelessWidget {
                     fullName: '${user.firstName} ${user.lastName}',
                     email: user.email,
                     position: user.position,
-                    imageUrl: '',
+                    imageUrl: user.imageUrl,
                   ),
                   const SizedBox(height: 30.0),
-                  const UserDetails(
+                  UserDetails(
                     title: vorgesetzter,
-                    fullName: 'Greg Neu',
+                    fullName: '${superior.firstName} ${superior.lastName}',
                     imageUrl: '',
                     email: 'max.mustermann@bkl.de',
                     mobile: '11--22--222',

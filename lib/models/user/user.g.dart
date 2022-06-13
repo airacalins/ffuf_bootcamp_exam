@@ -17,6 +17,7 @@ _$_User _$$_UserFromJson(Map<String, dynamic> json) => _$_User(
       telephone: json['telephone'] as String,
       fax: json['fax'] as String,
       mobile: json['mobile'] as String,
+      superiorId: json['superiorId'] as String,
     );
 
 Map<String, dynamic> _$$_UserToJson(_$_User instance) => <String, dynamic>{
@@ -30,4 +31,5 @@ Map<String, dynamic> _$$_UserToJson(_$_User instance) => <String, dynamic>{
       'telephone': instance.telephone,
       'fax': instance.fax,
       'mobile': instance.mobile,
+      'superiorId': instance.superiorId,
     };

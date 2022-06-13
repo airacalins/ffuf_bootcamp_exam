@@ -15,11 +15,7 @@ class AccountPage extends StatelessWidget {
     return StoreConnector<AppState, AccountViewModel>(
       vm: () => AccountFactory(this),
       onInit: (store) async {},
-      builder: (context, vm) => vm.unionPageState.when(
-        (loginUser) => AccountScreen(user: loginUser!),
-        loading: () => const LoadingScreen(),
-        error: (message) => Scaffold(body: Center(child: Text(message!))),
-      ),
+      builder: (context, vm) => AccountScreen(user: vm.loggedInUser, superior: vm.superior),
     );
   }
 }

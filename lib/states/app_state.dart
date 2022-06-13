@@ -8,12 +8,12 @@ part 'app_state.g.dart';
 class AppState with _$AppState {
   factory AppState({
     required List<User> users,
-    User? loginUser,
+    User? loggedInUser,
   }) = _AppState;
 
   factory AppState.initialState({required}) => AppState(
         users: [],
-        loginUser: null,
+        loggedInUser: null,
       );
 
   factory AppState.fromJson(Map<String, dynamic> json) => _$AppStateFromJson(json);

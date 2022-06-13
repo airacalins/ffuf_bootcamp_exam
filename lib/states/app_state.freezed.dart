@@ -21,7 +21,7 @@ AppState _$AppStateFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$AppState {
   List<User> get users => throw _privateConstructorUsedError;
-  User? get loginUser => throw _privateConstructorUsedError;
+  User? get loggedInUser => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -33,9 +33,9 @@ mixin _$AppState {
 abstract class $AppStateCopyWith<$Res> {
   factory $AppStateCopyWith(AppState value, $Res Function(AppState) then) =
       _$AppStateCopyWithImpl<$Res>;
-  $Res call({List<User> users, User? loginUser});
+  $Res call({List<User> users, User? loggedInUser});
 
-  $UserCopyWith<$Res>? get loginUser;
+  $UserCopyWith<$Res>? get loggedInUser;
 }
 
 /// @nodoc
@@ -49,28 +49,28 @@ class _$AppStateCopyWithImpl<$Res> implements $AppStateCopyWith<$Res> {
   @override
   $Res call({
     Object? users = freezed,
-    Object? loginUser = freezed,
+    Object? loggedInUser = freezed,
   }) {
     return _then(_value.copyWith(
       users: users == freezed
           ? _value.users
           : users // ignore: cast_nullable_to_non_nullable
               as List<User>,
-      loginUser: loginUser == freezed
-          ? _value.loginUser
-          : loginUser // ignore: cast_nullable_to_non_nullable
+      loggedInUser: loggedInUser == freezed
+          ? _value.loggedInUser
+          : loggedInUser // ignore: cast_nullable_to_non_nullable
               as User?,
     ));
   }
 
   @override
-  $UserCopyWith<$Res>? get loginUser {
-    if (_value.loginUser == null) {
+  $UserCopyWith<$Res>? get loggedInUser {
+    if (_value.loggedInUser == null) {
       return null;
     }
 
-    return $UserCopyWith<$Res>(_value.loginUser!, (value) {
-      return _then(_value.copyWith(loginUser: value));
+    return $UserCopyWith<$Res>(_value.loggedInUser!, (value) {
+      return _then(_value.copyWith(loggedInUser: value));
     });
   }
 }
@@ -81,10 +81,10 @@ abstract class _$$_AppStateCopyWith<$Res> implements $AppStateCopyWith<$Res> {
           _$_AppState value, $Res Function(_$_AppState) then) =
       __$$_AppStateCopyWithImpl<$Res>;
   @override
-  $Res call({List<User> users, User? loginUser});
+  $Res call({List<User> users, User? loggedInUser});
 
   @override
-  $UserCopyWith<$Res>? get loginUser;
+  $UserCopyWith<$Res>? get loggedInUser;
 }
 
 /// @nodoc
@@ -100,16 +100,16 @@ class __$$_AppStateCopyWithImpl<$Res> extends _$AppStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object? users = freezed,
-    Object? loginUser = freezed,
+    Object? loggedInUser = freezed,
   }) {
     return _then(_$_AppState(
       users: users == freezed
           ? _value._users
           : users // ignore: cast_nullable_to_non_nullable
               as List<User>,
-      loginUser: loginUser == freezed
-          ? _value.loginUser
-          : loginUser // ignore: cast_nullable_to_non_nullable
+      loggedInUser: loggedInUser == freezed
+          ? _value.loggedInUser
+          : loggedInUser // ignore: cast_nullable_to_non_nullable
               as User?,
     ));
   }
@@ -118,7 +118,7 @@ class __$$_AppStateCopyWithImpl<$Res> extends _$AppStateCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_AppState implements _AppState {
-  _$_AppState({required final List<User> users, this.loginUser})
+  _$_AppState({required final List<User> users, this.loggedInUser})
       : _users = users;
 
   factory _$_AppState.fromJson(Map<String, dynamic> json) =>
@@ -132,11 +132,11 @@ class _$_AppState implements _AppState {
   }
 
   @override
-  final User? loginUser;
+  final User? loggedInUser;
 
   @override
   String toString() {
-    return 'AppState(users: $users, loginUser: $loginUser)';
+    return 'AppState(users: $users, loggedInUser: $loggedInUser)';
   }
 
   @override
@@ -145,7 +145,8 @@ class _$_AppState implements _AppState {
         (other.runtimeType == runtimeType &&
             other is _$_AppState &&
             const DeepCollectionEquality().equals(other._users, _users) &&
-            const DeepCollectionEquality().equals(other.loginUser, loginUser));
+            const DeepCollectionEquality()
+                .equals(other.loggedInUser, loggedInUser));
   }
 
   @JsonKey(ignore: true)
@@ -153,7 +154,7 @@ class _$_AppState implements _AppState {
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(_users),
-      const DeepCollectionEquality().hash(loginUser));
+      const DeepCollectionEquality().hash(loggedInUser));
 
   @JsonKey(ignore: true)
   @override
@@ -167,15 +168,16 @@ class _$_AppState implements _AppState {
 }
 
 abstract class _AppState implements AppState {
-  factory _AppState({required final List<User> users, final User? loginUser}) =
-      _$_AppState;
+  factory _AppState(
+      {required final List<User> users,
+      final User? loggedInUser}) = _$_AppState;
 
   factory _AppState.fromJson(Map<String, dynamic> json) = _$_AppState.fromJson;
 
   @override
   List<User> get users => throw _privateConstructorUsedError;
   @override
-  User? get loginUser => throw _privateConstructorUsedError;
+  User? get loggedInUser => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$$_AppStateCopyWith<_$_AppState> get copyWith =>
