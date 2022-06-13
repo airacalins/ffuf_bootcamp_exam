@@ -1,9 +1,10 @@
 import 'package:async_redux/async_redux.dart';
+import 'package:ffuf_bootcamp_exam/features/auth/auth_page.dart';
+import 'package:ffuf_bootcamp_exam/screens/export_screens.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
 import 'package:ffuf_bootcamp_exam/routes/route_manager.dart';
-import 'package:ffuf_bootcamp_exam/pages/export_pages.dart';
 import 'package:ffuf_bootcamp_exam/states/app_state.dart';
 import 'package:ffuf_bootcamp_exam/themes/export_themes.dart';
 
@@ -28,10 +29,15 @@ class MyApp extends StatelessWidget {
           fontFamily: 'Roboto',
           textTheme: AppText.styles,
           elevatedButtonTheme: AppButton.elevated,
+          appBarTheme: const AppBarTheme(
+            backgroundColor: Colors.white,
+            elevation: 0,
+          ),
         ),
         debugShowCheckedModeBanner: false,
         // home: ProjectAssignmentScreen(),
-        home: const AuthPage(),
+        home: const UserScreen(),
+        // home: const UserPage(),
         onGenerateRoute: RouteManager.generateRoute,
       ),
     );

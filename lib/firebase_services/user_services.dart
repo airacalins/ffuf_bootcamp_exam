@@ -14,5 +14,6 @@ class UserServices {
         .map((snapshot) =>
             snapshot.docs.map((doc) => User.fromJson(doc.data())).toList());
     _users = await userStream.first;
+    print(_users);
   }
 }

@@ -11,6 +11,8 @@ class FetchUsers extends ReduxAction<AppState> {
       final userService = UserServices();
       await userService.fetchUsers();
       final users = userService.users;
+      print("users");
+      print(users);
       return state.copyWith(users: users);
     } on Exception catch (e) {
       print(e);

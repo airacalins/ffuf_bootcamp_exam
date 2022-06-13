@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 const textColor = Color(0xff191D26);
 // const textColor = Color(0xff00A4EA);
 // const textColor = Color(0xffB9B9B9);
-// const textColor = Color(0xffE0E0E0);
+const scaffoldColor = Color(0xffE0E0E0);
 
 const blue = Color(0xff6788FF);
 const yellow = Color(0xffFFB72B);

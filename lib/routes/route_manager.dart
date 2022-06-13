@@ -1,4 +1,4 @@
-import 'package:ffuf_bootcamp_exam/pages/auth/auth_page.dart';
+import 'package:ffuf_bootcamp_exam/features/auth/auth_page.dart';
 import 'package:flutter/material.dart';
 
 class RouteManager {
@@ -7,7 +7,7 @@ class RouteManager {
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
       case authPage:
-        return MaterialPageRoute(builder: (context) => const AuthPage());
+        return MaterialPageRoute(builder: (context) => AuthPage());
 
       // TODO: Not Found Page Screen
       default:
