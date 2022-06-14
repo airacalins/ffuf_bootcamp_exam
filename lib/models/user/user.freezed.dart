@@ -26,6 +26,7 @@ mixin _$User {
   String get imageUrl => throw _privateConstructorUsedError;
   String get email => throw _privateConstructorUsedError;
   String get position => throw _privateConstructorUsedError;
+  String get companyName => throw _privateConstructorUsedError;
   String get address => throw _privateConstructorUsedError;
   String get telephone => throw _privateConstructorUsedError;
   String get fax => throw _privateConstructorUsedError;
@@ -56,6 +57,7 @@ abstract class $UserCopyWith<$Res> {
       String imageUrl,
       String email,
       String position,
+      String companyName,
       String address,
       String telephone,
       String fax,
@@ -87,6 +89,7 @@ class _$UserCopyWithImpl<$Res> implements $UserCopyWith<$Res> {
     Object? imageUrl = freezed,
     Object? email = freezed,
     Object? position = freezed,
+    Object? companyName = freezed,
     Object? address = freezed,
     Object? telephone = freezed,
     Object? fax = freezed,
@@ -125,6 +128,10 @@ class _$UserCopyWithImpl<$Res> implements $UserCopyWith<$Res> {
       position: position == freezed
           ? _value.position
           : position // ignore: cast_nullable_to_non_nullable
+              as String,
+      companyName: companyName == freezed
+          ? _value.companyName
+          : companyName // ignore: cast_nullable_to_non_nullable
               as String,
       address: address == freezed
           ? _value.address
@@ -194,6 +201,7 @@ abstract class _$$_UserCopyWith<$Res> implements $UserCopyWith<$Res> {
       String imageUrl,
       String email,
       String position,
+      String companyName,
       String address,
       String telephone,
       String fax,
@@ -226,6 +234,7 @@ class __$$_UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
     Object? imageUrl = freezed,
     Object? email = freezed,
     Object? position = freezed,
+    Object? companyName = freezed,
     Object? address = freezed,
     Object? telephone = freezed,
     Object? fax = freezed,
@@ -264,6 +273,10 @@ class __$$_UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
       position: position == freezed
           ? _value.position
           : position // ignore: cast_nullable_to_non_nullable
+              as String,
+      companyName: companyName == freezed
+          ? _value.companyName
+          : companyName // ignore: cast_nullable_to_non_nullable
               as String,
       address: address == freezed
           ? _value.address
@@ -331,6 +344,7 @@ class _$_User implements _User {
       required this.imageUrl,
       required this.email,
       required this.position,
+      required this.companyName,
       required this.address,
       required this.telephone,
       required this.fax,
@@ -360,6 +374,8 @@ class _$_User implements _User {
   @override
   final String position;
   @override
+  final String companyName;
+  @override
   final String address;
   @override
   final String telephone;
@@ -388,7 +404,7 @@ class _$_User implements _User {
 
   @override
   String toString() {
-    return 'User(id: $id, firstName: $firstName, lastName: $lastName, imageUrl: $imageUrl, email: $email, position: $position, address: $address, telephone: $telephone, fax: $fax, mobile: $mobile, superiorId: $superiorId, annualLeave: $annualLeave, remainingVacationEpos: $remainingVacationEpos, requested: $requested, carryoverFromPreviousYear: $carryoverFromPreviousYear, currentBudget: $currentBudget, sickDays: $sickDays, accumulatedHours: $accumulatedHours, totalHours: $totalHours)';
+    return 'User(id: $id, firstName: $firstName, lastName: $lastName, imageUrl: $imageUrl, email: $email, position: $position, companyName: $companyName, address: $address, telephone: $telephone, fax: $fax, mobile: $mobile, superiorId: $superiorId, annualLeave: $annualLeave, remainingVacationEpos: $remainingVacationEpos, requested: $requested, carryoverFromPreviousYear: $carryoverFromPreviousYear, currentBudget: $currentBudget, sickDays: $sickDays, accumulatedHours: $accumulatedHours, totalHours: $totalHours)';
   }
 
   @override
@@ -402,6 +418,8 @@ class _$_User implements _User {
             const DeepCollectionEquality().equals(other.imageUrl, imageUrl) &&
             const DeepCollectionEquality().equals(other.email, email) &&
             const DeepCollectionEquality().equals(other.position, position) &&
+            const DeepCollectionEquality()
+                .equals(other.companyName, companyName) &&
             const DeepCollectionEquality().equals(other.address, address) &&
             const DeepCollectionEquality().equals(other.telephone, telephone) &&
             const DeepCollectionEquality().equals(other.fax, fax) &&
@@ -434,6 +452,7 @@ class _$_User implements _User {
         const DeepCollectionEquality().hash(imageUrl),
         const DeepCollectionEquality().hash(email),
         const DeepCollectionEquality().hash(position),
+        const DeepCollectionEquality().hash(companyName),
         const DeepCollectionEquality().hash(address),
         const DeepCollectionEquality().hash(telephone),
         const DeepCollectionEquality().hash(fax),
@@ -468,6 +487,7 @@ abstract class _User implements User {
       required final String imageUrl,
       required final String email,
       required final String position,
+      required final String companyName,
       required final String address,
       required final String telephone,
       required final String fax,
@@ -496,6 +516,8 @@ abstract class _User implements User {
   String get email => throw _privateConstructorUsedError;
   @override
   String get position => throw _privateConstructorUsedError;
+  @override
+  String get companyName => throw _privateConstructorUsedError;
   @override
   String get address => throw _privateConstructorUsedError;
   @override

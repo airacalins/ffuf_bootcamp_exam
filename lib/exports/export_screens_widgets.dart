@@ -5,3 +5,6 @@ export 'package:ffuf_bootcamp_exam/screens/account/account_widgets/account_sick_
 export 'package:ffuf_bootcamp_exam/screens/account/account_widgets/az_account.dart';
 export 'package:ffuf_bootcamp_exam/screens/auth/auth_widgets/auth_footer.dart';
 export 'package:ffuf_bootcamp_exam/screens/auth/auth_widgets/auth_sign_in_button.dart';
+export 'package:ffuf_bootcamp_exam/screens/business_card/business_card_widgets/business_card_address.dart';
+export 'package:ffuf_bootcamp_exam/screens/business_card/business_card_widgets/business_card_contact.dart';
+export 'package:ffuf_bootcamp_exam/screens/business_card/business_card_widgets/business_card_tab_view.dart';

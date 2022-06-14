@@ -12,6 +12,7 @@ class User with _$User {
     required String imageUrl,
     required String email,
     required String position,
+    required String companyName,
     required String address,
     required String telephone,
     required String fax,

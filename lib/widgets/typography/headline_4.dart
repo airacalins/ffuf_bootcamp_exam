@@ -2,16 +2,22 @@ import 'package:flutter/material.dart';
 
 class Headline4 extends StatelessWidget {
   final String text;
+  final String? fontFamily;
 
-  const Headline4(this.text, {Key? key}) : super(key: key);
+  const Headline4(
+    this.text, {
+    Key? key,
+    this.fontFamily,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final textTheme = Theme.of(context).textTheme;
-
     return Text(
       text,
-      style: textTheme.headline4,
+      style: Theme.of(context)
+          .textTheme
+          .headline4!
+          .merge(TextStyle(fontFamily: fontFamily)),
     );
   }
 }

@@ -1,4 +1,6 @@
 import 'package:async_redux/async_redux.dart';
+import 'package:ffuf_bootcamp_exam/exports/export_screens.dart';
+import 'package:ffuf_bootcamp_exam/features/business_card/business_card_page.dart';
 import 'package:ffuf_bootcamp_exam/screens/business_card/business_card_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -27,9 +29,9 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         theme: AppTheme.customStyles,
         debugShowCheckedModeBanner: false,
-        home: BusinessCardScreen(),
-        // home: const AuthPage(),
-        // onGenerateRoute: RouteManager.generateRoute,
+        // home: CreateJobRecordScreen(),
+        home: const AuthPage(),
+        onGenerateRoute: RouteManager.generateRoute,
       ),
     );
   }
