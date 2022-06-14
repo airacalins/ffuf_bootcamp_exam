@@ -20,12 +20,12 @@ class AppText {
     ),
     subtitle1: TextStyle(
       fontSize: 12,
-      fontWeight: FontWeight.w300,
+      fontWeight: FontWeight.w400,
       color: textColor,
     ),
     subtitle2: TextStyle(
       fontSize: 10,
-      fontWeight: FontWeight.w300,
+      fontWeight: FontWeight.w400,
       color: textColor,
     ),
   );
