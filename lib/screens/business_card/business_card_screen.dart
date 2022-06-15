@@ -24,7 +24,7 @@ class BusinessCardScreen extends StatelessWidget {
         appBar: AppBar(),
         drawer: const SideNavPage(),
         body: Column(
-          children: <Widget>[
+          children: [
             Container(
               margin: const EdgeInsets.all(15.0),
               height: 50,

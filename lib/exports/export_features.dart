@@ -6,6 +6,8 @@ export 'package:ffuf_bootcamp_exam/features/business_card/business_card_factory.
 export 'package:ffuf_bootcamp_exam/features/business_card/business_card_view_model.dart';
 export 'package:ffuf_bootcamp_exam/features/side_nav/side_nav_factory.dart';
 export 'package:ffuf_bootcamp_exam/features/side_nav/side_nav_view_model.dart';
+export 'package:ffuf_bootcamp_exam/features/create_time_tracking/create_time_tracking_factory.dart';
+export 'package:ffuf_bootcamp_exam/features/create_time_tracking/create_time_tracking_view_model.dart';
 export 'package:ffuf_bootcamp_exam/features/time_tracking/time_tracking_factory.dart';
 export 'package:ffuf_bootcamp_exam/features/time_tracking/time_tracking_view_model.dart';
 

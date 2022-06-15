@@ -14,7 +14,10 @@ class SideNavPage extends StatelessWidget {
     return StoreConnector<AppState, SideNavViewModel>(
       vm: () => SideNavFactory(this),
       onInit: (store) async => SetActiveSideNavAction(meinKonto),
-      builder: (context, vm) => SideDrawer(navName: vm.navName, setActiveNav: vm.setActiveNav),
+      builder: (context, vm) => SideDrawer(
+        navName: vm.navName,
+        setActiveNav: vm.setActiveNav,
+      ),
     );
   }
 }
