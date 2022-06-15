@@ -1,3 +1,4 @@
+import 'package:ffuf_bootcamp_exam/exports/export_pages.dart';
 import 'package:flutter/material.dart';
 
 import 'package:ffuf_bootcamp_exam/exports/export_models.dart';
@@ -21,7 +22,7 @@ class BusinessCardScreen extends StatelessWidget {
       length: 2,
       child: Scaffold(
         appBar: AppBar(),
-        drawer: const SideDrawer(),
+        drawer: const SideNavPage(),
         body: Column(
           children: <Widget>[
             Container(

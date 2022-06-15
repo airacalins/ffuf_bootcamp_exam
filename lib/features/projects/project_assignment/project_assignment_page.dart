@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 import 'package:ffuf_bootcamp_exam/states/app_state.dart';
-import 'package:ffuf_bootcamp_exam/actions/export_actions.dart';
+import 'package:ffuf_bootcamp_exam/exports/export_actions.dart';
 
 class ProjectAssignmentScreen extends StatelessWidget {
   const ProjectAssignmentScreen({Key? key}) : super(key: key);
@@ -25,8 +25,7 @@ class ProjectAssignmentScreen extends StatelessWidget {
               (users) => ListView.builder(
                 shrinkWrap: true,
                 itemCount: users.length,
-                itemBuilder: (BuildContext context, int index) =>
-                    Text(users[index].firstName),
+                itemBuilder: (BuildContext context, int index) => Text(users[index].firstName),
               ),
               loading: () => const Expanded(
                 child: Center(

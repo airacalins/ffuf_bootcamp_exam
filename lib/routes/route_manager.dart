@@ -6,6 +6,7 @@ class RouteManager {
   static const String authPage = '/';
   static const String accountPage = '/account';
   static const String businessCardPage = '/businessCard';
+  static const String timeTrackingPage = '/timeTracking';
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
@@ -15,6 +16,8 @@ class RouteManager {
         return MaterialPageRoute(builder: (context) => const AccountPage());
       case businessCardPage:
         return MaterialPageRoute(builder: (context) => const BusinessCardPage());
+      case timeTrackingPage:
+        return MaterialPageRoute(builder: (context) => const TimeTrackingPage());
 
       // TODO: Not Found Page Screen
       default:

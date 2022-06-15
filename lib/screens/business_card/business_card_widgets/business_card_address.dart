@@ -32,7 +32,12 @@ class BusinessCardAddress extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Headline4(companyName),
-                Text(address),
+                SizedBox(
+                  width: MediaQuery.of(context).size.width * 0.5,
+                  child: Text(
+                    address,
+                  ),
+                ),
               ],
             )
           ],

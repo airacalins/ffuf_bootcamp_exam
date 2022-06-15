@@ -43,7 +43,7 @@ class UserDetails extends StatelessWidget {
                 Headline4(fullName),
                 Label1(email),
                 const SizedBox(height: 10.0),
-                position != null ? Label1(position!) : RectangularSlantingEndClipper(title: mobile!),
+                position != null ? Label1(position!) : RectangularSlantingEndClipper(mobile!),
               ],
             )
           ],
