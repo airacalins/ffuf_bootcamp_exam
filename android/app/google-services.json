@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "168966391211",
+    "project_id": "bootcamp-exam",
+    "storage_bucket": "bootcamp-exam.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:168966391211:android:f7b9e47a230d580f31feee",
+        "android_client_info": {
+          "package_name": "com.example.ffuf_bootcamp_exam"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "168966391211-iffu8nk8647okitaoemmv7jrnocgcinj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBzTG7dJDC8fhbcyZaIYg4K76P2ODoKEIY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "168966391211-iffu8nk8647okitaoemmv7jrnocgcinj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
