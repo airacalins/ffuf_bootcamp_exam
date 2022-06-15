@@ -10,8 +10,7 @@ const String aktuellesBudget = 'Aktuelles Budget';
 const String aktuellesUrlaubsbudget = 'Aktuelles Urlaubsbudget';
 const String anmelden = 'Anmelden';
 const String arbeitszeit = 'Arbeitszeit';
-const String arbeitszeitenInsgesamtFurHeute =
-    'Arbeitszeiten insgesamt für Heute';
+const String arbeitszeitenInsgesamtFurHeute = 'Arbeitszeiten insgesamt für Heute';
 const String azKonto = 'AZ Konto';
 const String baustellenvorbereitung = 'Baustellenvorbereitung';
 const String beantragt = 'Beantragt';
@@ -48,6 +47,7 @@ const String monat = 'Monat';
 const String monatsbericht = 'Monatsbericht';
 const String monatsberichtErstellen = 'Monatsbericht erstellen';
 const String montag = 'Montag';
+const String offen = 'Offen';
 const String pause = 'Pause';
 const String projektnummer = 'Projektnummer';
 const String projektnummerHinzufugen = 'Projektnummer hinzufügen';
@@ -72,8 +72,7 @@ const String wahlenSieBitteKategorieAus = 'Wahlen Sie bitte Kategorie aus';
 const String wartenAufFreigabe = 'Warten auf Freigabe';
 const String wartezeit = 'Wartezeit';
 const String wieAngegeben = 'Wie angegeben';
-const String wirHabenIhreArbeitszeitenErfasst =
-    'Wir haben Ihre Arbeitszeiten erfasst';
+const String wirHabenIhreArbeitszeitenErfasst = 'Wir haben Ihre Arbeitszeiten erfasst';
 const String wirHabenIhrenAntragErfasst = 'Wir haben Ihren Antrag erfasst';
 const String wochenbericht = 'Wochenbericht';
 const String wochenberichtZuschicken = 'Wochenbericht zuschicken';

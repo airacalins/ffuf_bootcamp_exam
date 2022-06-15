@@ -6,7 +6,14 @@ import 'package:ffuf_bootcamp_exam/routes/route_manager.dart';
 import 'package:ffuf_bootcamp_exam/widgets/drawer/side_drawer_item.dart';
 
 class SideDrawer extends StatelessWidget {
-  const SideDrawer({Key? key}) : super(key: key);
+  final String navName;
+  final Function setActiveNav;
+
+  const SideDrawer({
+    Key? key,
+    required this.navName,
+    required this.setActiveNav,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -37,20 +44,38 @@ class SideDrawer extends StatelessWidget {
               padding: const EdgeInsets.all(30.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: const [
+                children: [
                   SideDrawerItem(
                     activeIcon: userActiveIcon,
                     inActiveIcon: userInactiveIcon,
                     title: meinKonto,
-                    isActive: true,
+                    isActive: navName == meinKonto,
                     navigateTo: RouteManager.accountPage,
+                    onTap: () => setActiveNav(meinKonto),
                   ),
                   SideDrawerItem(
                     activeIcon: businessCardActiveIcon,
                     inActiveIcon: businessCardInactiveIcon,
                     title: vielenDank,
-                    isActive: false,
+                    isActive: navName == vielenDank,
                     navigateTo: RouteManager.businessCardPage,
+                    onTap: () => setActiveNav(vielenDank),
+                  ),
+                  SideDrawerItem(
+                    activeIcon: timeTrackingActiveIcon,
+                    inActiveIcon: timeTrackingInactiveIcon,
+                    title: zeiterfassung,
+                    isActive: navName == zeiterfassung,
+                    navigateTo: RouteManager.timeTrackingPage,
+                    onTap: () => setActiveNav(zeiterfassung),
+                  ),
+                  SideDrawerItem(
+                    activeIcon: betActiveIcon,
+                    inActiveIcon: betInactiveIcon,
+                    title: meineEinsatze,
+                    isActive: navName == meineEinsatze,
+                    navigateTo: RouteManager.businessCardPage,
+                    onTap: () => setActiveNav(meineEinsatze),
                   )
                 ],
               ),

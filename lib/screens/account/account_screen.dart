@@ -1,3 +1,4 @@
+import 'package:ffuf_bootcamp_exam/exports/export_pages.dart';
 import 'package:flutter/material.dart';
 
 import 'package:ffuf_bootcamp_exam/exports/export_constants.dart';
@@ -19,7 +20,7 @@ class AccountScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      drawer: const SideDrawer(),
+      drawer: const SideNavPage(),
       body: SingleChildScrollView(
         child: Column(
           children: [

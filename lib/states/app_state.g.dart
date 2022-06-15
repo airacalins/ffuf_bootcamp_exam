@@ -13,10 +13,12 @@ _$_AppState _$$_AppStateFromJson(Map<String, dynamic> json) => _$_AppState(
       loggedInUser: json['loggedInUser'] == null
           ? null
           : User.fromJson(json['loggedInUser'] as Map<String, dynamic>),
+      activeSideNav: json['activeSideNav'] as String,
     );
 
 Map<String, dynamic> _$$_AppStateToJson(_$_AppState instance) =>
     <String, dynamic>{
       'users': instance.users,
       'loggedInUser': instance.loggedInUser,
+      'activeSideNav': instance.activeSideNav,
     };

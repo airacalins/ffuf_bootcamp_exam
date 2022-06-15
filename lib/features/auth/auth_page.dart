@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:async_redux/async_redux.dart';
 
-import 'package:ffuf_bootcamp_exam/actions/export_actions.dart';
+import 'package:ffuf_bootcamp_exam/exports/export_actions.dart';
 import 'package:ffuf_bootcamp_exam/exports/export_features.dart';
 import 'package:ffuf_bootcamp_exam/exports/export_screens.dart';
 import 'package:ffuf_bootcamp_exam/states/app_state.dart';

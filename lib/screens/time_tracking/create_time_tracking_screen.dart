@@ -4,8 +4,8 @@ import 'package:ffuf_bootcamp_exam/exports/export_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-class CreateJobRecordScreen extends StatelessWidget {
-  const CreateJobRecordScreen({Key? key}) : super(key: key);
+class CreateTimeTrackingScreen extends StatelessWidget {
+  const CreateTimeTrackingScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

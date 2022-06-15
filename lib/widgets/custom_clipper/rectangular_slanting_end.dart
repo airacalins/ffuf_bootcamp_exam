@@ -17,9 +17,9 @@ class RectangularSlantingEnd extends CustomClipper<Path> {
 class RectangularSlantingEndClipper extends StatelessWidget {
   final String title;
 
-  const RectangularSlantingEndClipper({
+  const RectangularSlantingEndClipper(
+    this.title, {
     Key? key,
-    required this.title,
   }) : super(key: key);
 
   @override

@@ -8,15 +8,15 @@ class UserServices {
   List<User> get users => _users;
 
   Future<void> fetchUsers() async {
-    Stream<List<User>> userStream = FirebaseFirestore.instance
-        .collection('users')
-        .snapshots()
-        .map((snapshot) =>
-            snapshot.docs.map((doc) => User.fromJson(doc.data())).toList());
-    _users = await userStream.first;
-    // Future<List<User>> users = FirebaseFirestore.instance.collection('users').get().then(
-    //       (value) => value.docs.map((e) => User.fromJson(e.data())).toList(),
-    //     );
-    // _users = await users;
+    // Stream<List<User>> userStream = FirebaseFirestore.instance
+    //     .collection('users')
+    //     .snapshots()
+    //     .map((snapshot) =>
+    //         snapshot.docs.map((doc) => User.fromJson(doc.data())).toList());
+    // _users = await userStream.first;
+    Future<List<User>> users = FirebaseFirestore.instance.collection('users').get().then(
+          (value) => value.docs.map((e) => User.fromJson(e.data())).toList(),
+        );
+    _users = await users;
   }
 }

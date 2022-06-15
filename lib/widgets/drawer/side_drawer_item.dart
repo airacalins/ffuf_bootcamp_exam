@@ -10,6 +10,7 @@ class SideDrawerItem extends StatelessWidget {
   final String title;
   final String navigateTo;
   final bool isActive;
+  final Function onTap;
 
   const SideDrawerItem({
     Key? key,
@@ -18,12 +19,16 @@ class SideDrawerItem extends StatelessWidget {
     required this.title,
     required this.navigateTo,
     required this.isActive,
+    required this.onTap,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => Navigator.of(context).pushReplacementNamed(navigateTo),
+      onTap: () {
+        onTap();
+        Navigator.of(context).pushReplacementNamed(navigateTo);
+      },
       child: Column(
         children: [
           SvgPicture.asset(isActive ? activeIcon : inActiveIcon),
