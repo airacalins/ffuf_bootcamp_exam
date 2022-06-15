@@ -74,7 +74,7 @@ class SideDrawer extends StatelessWidget {
                     inActiveIcon: betInactiveIcon,
                     title: meineEinsatze,
                     isActive: navName == meineEinsatze,
-                    navigateTo: RouteManager.businessCardPage,
+                    navigateTo: RouteManager.holidayPage,
                     onTap: () => setActiveNav(meineEinsatze),
                   )
                 ],

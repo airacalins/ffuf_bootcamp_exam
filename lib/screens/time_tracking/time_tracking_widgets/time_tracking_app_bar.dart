@@ -1,47 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:syncfusion_flutter_calendar/calendar.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 import 'package:ffuf_bootcamp_exam/exports/export_constants.dart';
-import 'package:ffuf_bootcamp_exam/exports/export_pages.dart';
-import 'package:ffuf_bootcamp_exam/exports/export_widgets.dart';
 import 'package:ffuf_bootcamp_exam/routes/route_manager.dart';
-
-class TimeTrackingScreen extends StatelessWidget {
-  const TimeTrackingScreen({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: TimeTrackingAppBar(appBar: AppBar()),
-      drawer: const SideNavPage(),
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            Container(
-              padding: EdgeInsets.only(bottom: 10.0),
-              color: Colors.white,
-              child: Row(
-                children: const [
-                  SizedBox(width: 70.0),
-                  RectangularSlantingEndClipper(offen),
-                  Headline4('12.01.2021'),
-                ],
-              ),
-            ),
-            Container(
-              margin: const EdgeInsets.all(10.0),
-              child: SfCalendar(
-                view: CalendarView.day,
-                headerDateFormat: 'E',
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
 
 class TimeTrackingAppBar extends StatelessWidget implements PreferredSizeWidget {
   final AppBar appBar;

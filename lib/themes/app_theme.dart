@@ -6,6 +6,7 @@ class AppTheme {
     fontFamily: 'Roboto',
     textTheme: AppText.styles,
     elevatedButtonTheme: AppButton.elevated,
+    textButtonTheme: AppButton.text,
     appBarTheme: const AppBarTheme(
       backgroundColor: Colors.white,
       foregroundColor: Colors.black,
