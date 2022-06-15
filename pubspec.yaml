@@ -34,6 +34,7 @@ flutter:
 
   assets:
     - assets/icons/
+    - assets/images/
     - assets/logo/
 
   fonts:
@@ -80,3 +81,8 @@ flutter:
         - asset: assets/fonts/roboto/Roboto-BlackItalic.ttf
           weight: 900
           style: italic
+
+    - family: Allerta Stencil
+      fonts:
+        - asset: assets/fonts/allerta_stencil/AllertaStencil-Regular.ttf
+          weight: 400

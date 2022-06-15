@@ -77,5 +77,6 @@ const String wirHabenIhreArbeitszeitenErfasst =
 const String wirHabenIhrenAntragErfasst = 'Wir haben Ihren Antrag erfasst';
 const String wochenbericht = 'Wochenbericht';
 const String wochenberichtZuschicken = 'Wochenbericht zuschicken';
+const String wwwFlutterBootcampCom = 'www.flutter-bootcamp.com';
 const String zeiterfassung = 'Zeiterfassung';
 const String zeitraum = 'Zeitraum';

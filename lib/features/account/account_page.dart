@@ -13,7 +13,10 @@ class AccountPage extends StatelessWidget {
     return StoreConnector<AppState, AccountViewModel>(
       vm: () => AccountFactory(this),
       onInit: (store) async {},
-      builder: (context, vm) => AccountScreen(user: vm.loggedInUser, superior: vm.superior),
+      builder: (context, vm) => AccountScreen(
+        user: vm.loggedInUser,
+        superior: vm.superior,
+      ),
     );
   }
 }

@@ -13,10 +13,9 @@ class BusinessCardPage extends StatelessWidget {
     return StoreConnector<AppState, BusinessCardViewModel>(
       vm: () => BusinessCardFactory(this),
       onInit: (store) async {},
-      builder: (context, vm) => vm.unionPageState.when(
-        (loginUser) => const BusinessCardScreen(),
-        loading: () => const LoadingScreen(),
-        error: (message) => Scaffold(body: Center(child: Text(message!))),
+      builder: (context, vm) => BusinessCardScreen(
+        loggedInUser: vm.loggedInUser,
+        superior: vm.superior,
       ),
     );
   }
